@@ -98,6 +98,14 @@
         }
     </style>
 
+    <script>
+        $(document).ready(function () {
+            $('img.thumbnail').click(function () {
+                window.location.href = this.id + '.html';
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -106,9 +114,9 @@
             <a class="navbar-brand">Madeleine Elyea</a>
             <div class="navbar-nav">
                 <ul class="navbar-nav">
-                    <a href='#' class='nav-link'>home</a>
-                    <a href='#about' class='nav-link'>about</a>
-                    <a href='#contact' class="nav-link">contact</a>
+                    <a href='/Users/MadeleineElyea/Documents/GitHub/Portfolio/Portfolio.html' class='nav-link'>home</a>
+                    <a href='/Users/MadeleineElyea/Documents/GitHub/Portfolio/about.html' class='nav-link'>about</a>
+                    <a href='/Users/MadeleineElyea/Documents/GitHub/Portfolio/contact.html' class="nav-link">contact</a>
                 </ul>
             </div>
 
@@ -121,7 +129,9 @@
         <div class="row">
             <div class="column">
                 <div class="content">
-                    <img src="https://i.imgur.com/P1jsx0j.gif" alt="faceMorph" style='width:100%'>
+                    <a href="https://github.com/madelyea/FaceMorph"><img src="https://i.imgur.com/P1jsx0j.gif"
+                            alt="faceMorph" style='width:100%'></a>
+
                     <h3>Face Morphing Project</h3>
                     <p>This is a project I completed in my Computer Vision course.</p>
                 </div>
@@ -138,15 +148,19 @@
                 <div class="content">
                     <img src="https://i.stack.imgur.com/B0gjF.jpg" alt="faceMorph" style='width:100%'>
                     <h3>Gaussian Elimination</h3>
-                    <p>This is a project I completed in my Numerical Interpretations course.</p>
+                    <p>This is a simple project I completed in my Numerical Computations course. It takes in a matrix
+                        and solution list and performs Gaussian Elimination.</p>
                 </div>
             </div>
             <div class="column">
                 <div class="content">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif"
-                        alt="Quicksorts" style='width:100%'>
+                    <a href="https://github.com/madelyea/Quicksorts"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif"
+                            alt="Quicksorts" style='width:100%'></a>
+
                     <h3>Quicksorts</h3>
-                    <p>This is a project I completed in my Algorithms course.</p>
+                    <p>An Implementation of Quicksort with Insertion Sort, Dual Pivot Quicksort, Dual Pivot Quicksort
+                        with Insertion Sort</p>
                 </div>
             </div>
             <div class='content'>
