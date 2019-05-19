@@ -73,6 +73,16 @@
         .content {
             background-color: white;
             padding: 10px;
+            /* transition: filter .5s ease-in-out; */
+            /* -webkit-filter: grayscale(0%);
+            filter: grayscale(0%); */
+            opacity: 1.0;
+            filter: alpha(opacity=100);
+        }
+
+        .content:hover {
+            opacity: 0.70;
+            filter: alpha(opacity=70);
         }
 
         @media screen and (max-width: 1500px) {
@@ -104,41 +114,48 @@
 
 
         </nav>
+        <div class="h1">
+            <h1>Portfolio</h1>
+            <p>Below are a few of the projects I've completed.</p>
+        </div>
         <div class="row">
             <div class="column">
                 <div class="content">
-                    <img src="faceMorph.gif" alt="faceMorph" style='width:100%'>
+                    <img src="https://i.imgur.com/P1jsx0j.gif" alt="faceMorph" style='width:100%'>
                     <h3>Face Morphing Project</h3>
                     <p>This is a project I completed in my Computer Vision course.</p>
                 </div>
-                <div class="column">
-                    <div class="content">
-                        <img src="faceMorph.gif" alt="faceMorph" style='width:100%'>
-                        <h3>Operating Systems Project</h3>
-                        <p>I expanded on the xv6 architecture in my OS course.</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="content">
-                        <img src="faceMorph.gif" alt="faceMorph" style='width:100%'>
-                        <h3>Project</h3>
-                        <p>This is a project I completed in my Computer Vision course.</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="content">
-                        <img src="faceMorph.gif" alt="faceMorph" style='width:100%'>
-                        <h3>Face Morphing Project</h3>
-                        <p>This is a project I completed in my Computer Vision course.</p>
-                    </div>
-                </div>
-                <div class='content'>
-                    <img src='faceMorph.gif' alt="photo" style='width:100%'>
-                    <h3>Other projects</h3>
-                    <p>lorem ipsum</p>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <img src="https://sites.google.com/site/theoryofoperatingsystems/outline-schedule/ch04-processes/process-state-diagram.PNG?attredirects=0"
+                        alt="OS" style='width:100%'>
+                    <h3>Operating Systems Project</h3>
+                    <p>I expanded on the xv6 architecture in my OS course.</p>
                 </div>
             </div>
+            <div class="column">
+                <div class="content">
+                    <img src="https://i.stack.imgur.com/B0gjF.jpg" alt="faceMorph" style='width:100%'>
+                    <h3>Gaussian Elimination</h3>
+                    <p>This is a project I completed in my Numerical Interpretations course.</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif"
+                        alt="Quicksorts" style='width:100%'>
+                    <h3>Quicksorts</h3>
+                    <p>This is a project I completed in my Algorithms course.</p>
+                </div>
+            </div>
+            <div class='content'>
+                <img src='faceMorph.gif' alt="other" style='width:100%'>
+                <h3>Other projects</h3>
+                <p>lorem ipsum</p>
+            </div>
         </div>
+    </div>
 </body>
 
 </html>
