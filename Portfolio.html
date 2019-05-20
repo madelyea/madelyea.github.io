@@ -15,6 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
         .navbar {
+            position: relative;
+            background-image: url("https://cdn.pixabay.com/photo/2016/11/11/20/05/wave-1817646_960_720.png");
+            background-position: top;
             margin-bottom: 30px;
         }
 
@@ -31,6 +34,8 @@
         a:hover,
         a:active {
             color: white;
+            background-image: url("https://cdn.pixabay.com/photo/2016/11/11/20/05/wave-1817646_960_720.png");
+
         }
 
         * {
@@ -39,8 +44,9 @@
 
         body {
             background-color: #f1f1f1;
+
             padding: 20px;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
         .main {
@@ -78,14 +84,15 @@
             filter: grayscale(0%); */
             opacity: 1.0;
             filter: alpha(opacity=100);
+
         }
 
         .content:hover {
-            opacity: 0.70;
-            filter: alpha(opacity=70);
+            opacity: 0.80;
+            filter: alpha(opacity=80);
         }
 
-        @media screen and (max-width: 1500px) {
+        @media screen and (max-width: 1000px) {
             .column {
                 width: 50%;
             }
@@ -96,15 +103,26 @@
                 width: 100%;
             }
         }
+
+        .other {
+            float: center;
+        }
+
+        .footer {
+            /* position: fixed; */
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-image: url("https://cdn.pixabay.com/photo/2016/11/11/20/05/wave-1817646_960_720.png");
+
+
+            color: white;
+            text-align: center;
+            margin-top: 30px;
+
+        }
     </style>
 
-    <script>
-        $(document).ready(function () {
-            $('img.thumbnail').click(function () {
-                window.location.href = this.id + '.html';
-            });
-        });
-    </script>
 
 </head>
 
@@ -127,31 +145,28 @@
         <p>Below are a few of the projects I've completed.</p>
 
         <div class="row">
+
+            <div class="column">
+                <div class="content">
+                    <a href="https://github.com/madelyea/xv6Project"><img
+                            src="https://sites.google.com/site/theoryofoperatingsystems/outline-schedule/ch04-processes/process-state-diagram.PNG?attredirects=0"
+                            alt="OS" style='width:100%'></a>
+                    <h3>Operating Systems Project</h3>
+                    <p>In this project, I expanded on the existing xv6 operating system architecture. This was for my
+                        Introduction to Operating Systems course.</p>
+                </div>
+            </div>
             <div class="column">
                 <div class="content">
                     <a href="https://github.com/madelyea/FaceMorph"><img src="https://i.imgur.com/P1jsx0j.gif"
                             alt="faceMorph" style='width:100%'></a>
 
                     <h3>Face Morphing Project</h3>
-                    <p>This is a project I completed in my Computer Vision course.</p>
+                    <p>This is a project I completed in my Computer Vision course. It takes in two images with faces and
+                        morphs them, generating a blended gif.</p>
                 </div>
             </div>
-            <div class="column">
-                <div class="content">
-                    <img src="https://sites.google.com/site/theoryofoperatingsystems/outline-schedule/ch04-processes/process-state-diagram.PNG?attredirects=0"
-                        alt="OS" style='width:100%'>
-                    <h3>Operating Systems Project</h3>
-                    <p>I expanded on the xv6 architecture in my OS course.</p>
-                </div>
-            </div>
-            <div class="column">
-                <div class="content">
-                    <img src="https://i.stack.imgur.com/B0gjF.jpg" alt="faceMorph" style='width:100%'>
-                    <h3>Gaussian Elimination</h3>
-                    <p>This is a simple project I completed in my Numerical Computations course. It takes in a matrix
-                        and solution list and performs Gaussian Elimination.</p>
-                </div>
-            </div>
+
             <div class="column">
                 <div class="content">
                     <a href="https://github.com/madelyea/Quicksorts"><img
@@ -159,16 +174,62 @@
                             alt="Quicksorts" style='width:100%'></a>
 
                     <h3>Quicksorts</h3>
-                    <p>An Implementation of Quicksort with Insertion Sort, Dual Pivot Quicksort, Dual Pivot Quicksort
-                        with Insertion Sort</p>
+                    <p>An Implementation of Quicksort with Insertion Sort, Dual Pivot Quicksort, and Dual Pivot
+                        Quicksort with Insertion Sort. This was a group project in my Algorithms course. We compared the
+                        search times of these three algorithms.</p>
                 </div>
             </div>
-            <div class='content'>
-                <img src='faceMorph.gif' alt="other" style='width:100%'>
-                <h3>Other projects</h3>
-                <p>lorem ipsum</p>
+        </div>
+        <div class="row">
+
+            <div class="column">
+                <div class="content">
+                    <a href="https://github.com/madelyea/GaussianElimination"><img
+                            src="https://i.stack.imgur.com/B0gjF.jpg" alt="faceMorph" style='width:100%'></a>
+                    <h3>Gaussian Elimination</h3>
+                    <p>This is a simple project I completed in my Numerical Computations course. It takes in a
+                        matrix
+                        and solution list and performs Gaussian Elimination.</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <a href="https://github.com/madelyea/HaskellFactorial"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Haskell-Logo.svg/1200px-Haskell-Logo.svg.png"
+                            alt="Quicksorts" style='width:100%'></a>
+
+                    <h3>Haskell Factorial</h3>
+                    <p>A program written in Haskell that solves the factorial of a number. This was a project in my
+                        Programming Languages course.</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <a href="https://github.com/madelyea/NewtonsMethod"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/e/e0/NewtonIteration_Ani.gif"
+                            alt="Quicksorts" style='width:100%'></a>
+
+                    <h3>Newton's Method</h3>
+                    <p>This program solves Newton's Method for complex numbers.</p>
+                </div>
             </div>
         </div>
+        <!-- <div class='other'>
+            <p><a href="https://github.com/madelyea/"><img
+                        src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="other"
+                        style='width:25%' align=left></a>
+                To view other projects, visit my
+                github.</p>
+
+        </div> -->
+
+    </div>
+    </div>
+    <div class="footer">
+        <div class="footer-expand-sm text-light bg-dark">
+            <p>Madeleine Elyea, May 2019</p>
+        </div>
+
     </div>
 </body>
 

@@ -17,6 +17,8 @@
     <style type="text/css">
         .navbar {
             margin-bottom: 30px;
+            background-image: url("https://cdn.pixabay.com/photo/2016/11/11/20/05/wave-1817646_960_720.png");
+            background-position: top;
         }
 
         a:link,
@@ -41,12 +43,40 @@
         body {
             background-color: #f1f1f1;
             padding: 20px;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
         .main {
             max-width: 1000px;
             margin: auto;
+        }
+
+        .social {
+            text-align: center;
+            max-width: 1000px;
+            margin: auto;
+            left: 1%;
+            right: 1%;
+            position: absolute;
+            padding-top: 60px;
+        }
+
+        .social li {
+            display: inline-block;
+            list-style-type: none;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-image: url("https://cdn.pixabay.com/photo/2016/11/11/20/05/wave-1817646_960_720.png");
+
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+
         }
     </style>
 
@@ -68,6 +98,21 @@
             </nav>
             <h1>Contact</h1>
             <hr>
+            <ul class="social">
+                <li><a href="https://www.instagram.com/madelpaddle/"><img
+                            src="https://image.flaticon.com/icons/svg/69/69366.svg"></a></li>
+                <li><a href="https://www.linkedin.com/in/madeleine-elyea-a0ba5a178/"><img
+                            src="https://cdn0.iconfinder.com/data/icons/inFocus_social_media/40/linkedin-logo.png"></a>
+                </li>
+                <li><a href="https://www.github.com/madelyea"><img
+                            src="https://cdn1.iconfinder.com/data/icons/Keyamoon-IcoMoon--limited/32/github-cat.png">
+            </ul>
+        </div>
+        <div class="footer">
+            <div class="footer-expand-sm text-light bg-dark">
+                <p>Madeleine Elyea, May 2019</p>
+            </div>
+
         </div>
     </body>
 </head>
