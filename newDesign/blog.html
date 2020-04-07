@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Madeleine Elyea</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+    <section class="wrapper style1 align-center">
+        <div class="inner">
+            <h2>Dead of the Day - Web Application</h2>
+            <div class="index align-left">
+
+                <p>I completed this project with my teammate Issac Greenfield as our final project for our Full
+                    Stack
+                    Web Development course at PSU. To view our project, click the Steal Your Face above!
+                    Initially, we intended to have a fully functional search engine for all Grateful Dead shows.
+                    This
+                    proved to be more work than we realized within the timeframe, so we scaled back to do "Dead of
+                    the
+                    Day". Looking back, I
+                    think it was the right decision,
+                    because our app is more streamlined and serves a specific purpose. For this project, we used
+                    HTML, CSS,
+                    Javascript,
+                    Bootstrap, JQuery, JSON, and Archive.org's search API. The biggest hurdle to this
+                    project was deciphering the ins and outs of archive.org's search API.
+                    There is some documentation on how to use it, but it required a lot of trial and error on our
+                    part. Once we figured out that the JSON link in the script call could be
+                    called on load, things started
+                    to come together. </p>
+                <p>
+                    Once the work on the API started showing results, this project became really interesting.
+                    I also learned how to put a function inside of a script, to dynamically obtain
+                    the JSON data for the
+                    current day. Archive.org has an advanced search feature that returns results in multiple
+                    different
+                    formats, including
+                    JSON as an option. Now that we have Dead of the Day completed, it would not be too
+                    difficult to
+                    expand to other
+                    searches. When we had the JSON object, it was fairly straightforward to get all the data we
+                    needed
+                    from it. I
+                    added some logic
+                    statements for cases when there was no data returned, so it wouldn’t show up as “undefined”
+                    on the
+                    site.
+                    <br>
+                </p>
+                <p>
+                    Another hurdle was figuring out how to open a new page when clicking one of the cards. This
+                    page had
+                    to be dynamically
+                    created and contain information from the card. We decided to add the identifier to the
+                    end of the link. This created a new web page from the show’s identifier
+                    (Every page on archive.org has a unique identifier that is stored in its JSON file).
+                    Then, on this page (show.html), we
+                    obtained the identifier information from the link by splicing it. Once we had this
+                    information,
+                    all
+                    the data could be
+                    obtained, including total run time, setlist, notes, and an embedded music player. I coded
+                    the
+                    embedded music player to show
+                    three songs at a time with a scroll option, because this worked best for our format. We
+                    wanted
+                    the color-changing bears to be visible
+                    while the show was playing, reminiscent of a visualizer.
+                </p>
+                <p>
+                    I tried to get the image file on each card to correspond to one of the show's image files,
+                    but this
+                    proved difficult
+                    because the naming
+                    is not consistent in the JSON data and the image file is not in the same place in each
+                    directory. There are lots
+                    of image files, some
+                    of them were .png and some were .jpg. If I had more time I could likely figure it out but I
+                    decided it was fine for
+                    now to have the same sound file image of a show on each card. Issac found a good sound file
+                    image
+                    that is a vector
+                    and our hover image shows up nicely behind it.
+
+
+                </p>
+                <p>
+                    Moving forward, I would like to edit the title of each card, because as of now, it is just
+                    pulling the full title which
+                    is not too easy to read. The format is: "Grateful Dead Live at Music Hall on 1976-06-11."
+                    The
+                    good news is,
+                    all of the titles are formatted the same way, so splicing the desired info would not be
+                    difficult. Additionally, there is the issue of repeats. When searching a Grateful Dead show
+                    on this
+                    day in history,
+                    there are lots of repeats due to different recordings (from tapers) as well as different
+                    sound
+                    formats of the same show.
+                    As of now it is pulling every one of these, but in the future I think it would make sense to
+                    either
+                    use logic to narrow it down
+                    to one example only (probably based on rating) or instead, when you click on a card for the
+                    show it
+                    would bring you to another page
+                    with every option for that show to let the user decide.
+
+                </p>
+                We narrowly fixed a mistake on the morning of our
+                presentation. I checked the
+                web page and there were no results! There was a simple mistake in how the date was being
+                generated
+                that Issac fixed, and
+                I’m glad I checked it early that morning.
+
+                Overall Issac and I had a great time making this project. I have to say it's been my
+                favorite
+                school project thus far.
+                Issac and I worked great as a team together, and we are both happy with the results. This is
+                actually a web
+                app that I will use, and my mom and friends will too!
+                </p>
+
+            </div>
+
+            <!-- Footer -->
+            <footer class="wrapper style1 align-center invert color1" id="last">
+                <div class="inner">
+
+                    <ul class="icons">
+                        <h2>Contact</h2>
+                        <li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+                        <li><a href="#" class="icon brands style2 fa-linkedin-in"><span
+                                    class="label">LinkedIn</span></a>
+                        </li>
+                        <li><a href="#" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
+                    </ul>
+
+                    <p>&copy Madeleine Elyea. Images: <a href="https://unsplash.com">Unsplash.com</a>. Design:
+                        <a href=https: //html5up.net"> HTML5UP.net</p>
+                </div>
+            </footer>
+            <!-- Scripts -->
+
+            <script src="assets/js/modal.js"></script>
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+
+    </section>
+
+</body>
+
+</html>

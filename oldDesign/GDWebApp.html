@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css" />
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style type="text/css">
+        .navbar {
+            margin-bottom: 30px;
+            background-image: url("https://cdn.pixabay.com/photo/2016/11/11/20/05/wave-1817646_960_720.png");
+            background-position: top;
+        }
+
+        a {
+            color: rgba(255, 255, 255, 0.514);
+        }
+
+        a:hover,
+        a:active {
+            color: white;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .imageClass:hover {
+            animation: colorRotate 5s linear infinite;
+        }
+
+        .linkClass {
+            color: purple;
+        }
+
+        body {
+            background-color: #f1f1f1;
+            padding: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .main {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .image {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        @keyframes colorRotate {
+            100% {
+                -webkit-filter: hue-rotate(360deg);
+            }
+        }
+
+        .footer {
+            /* position: fixed; */
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-image: url("https://cdn.pixabay.com/photo/2016/11/11/20/05/wave-1817646_960_720.png");
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <nav class="navbar navbar-expand-sm text-light bg-dark">
+            <a class="navbar-brand">Madeleine Elyea</a>
+            <div class="navbar-nav">
+                <ul class="navbar-nav">
+                    <a href='index.html' class='nav-link'>home</a>
+                    <a href='about.html' class='nav-link'>about</a>
+                    <a href='contact.html' class="nav-link">contact</a>
+                </ul>
+            </div>
+        </nav>
+        <h1>Dead of the Day</h1>
+        <hr>
+        <div class="content">
+            <a href="https://issacgreenfield.github.io/GDBWebApp/index.html" class="imageClass"><img
+                    src="images/stealyourface.png" alt="OS" style='max-width: 300px'></a>
+            <br><br>
+            <h3>Grateful Dead Web Application</h3>
+            <br>
+            <p>I completed this project with my teammate Issac Greenfield as our final project for our Full Stack
+                Web Development course at PSU. To view our project, click the Steal Your Face above!
+                Initially, we intended to have a fully functional search engine for all Grateful Dead shows. This
+                proved to be more work than we realized within the timeframe, so we scaled back to do "Dead of the
+                Day". Looking back, I
+                think it was the right decision,
+                because our app is more streamlined and serves a specific purpose. For this project, we used HTML, CSS,
+                Javascript,
+                Bootstrap, JQuery, JSON, and Archive.org's search API. The biggest hurdle to this
+                project was deciphering the ins and outs of archive.org's search API.
+                There is some documentation on how to use it, but it required a lot of trial and error on our
+                part.
+                Things really started moving when we tested this<a href="https://archive.org/help/json.php"
+                    class="linkClass">
+                    example</a> they provide. Once we figured out that the JSON link in the script call could be
+                called on load, things started
+                to come together. </p>
+            <p>
+                Once the work on the API started showing results, this project became really interesting.
+                I also learned how to put a function inside of a script, to dynamically obtain
+                the JSON data for the
+                current day. Archive.org has an advanced search feature that returns results in multiple
+                different
+                formats, including
+                JSON as an option. Now that we have Dead of the Day completed, it would not be too
+                difficult to
+                expand to other
+                searches. When we had the JSON object, it was fairly straightforward to get all the data we
+                needed
+                from it. I
+                added some logic
+                statements for cases when there was no data returned, so it wouldn’t show up as “undefined”
+                on the
+                site.
+                <br>
+            </p>
+            <p>
+                Another hurdle was figuring out how to open a new page when clicking one of the cards. This
+                page had
+                to be dynamically
+                created and contain information from the card. We decided to add the identifier to the
+                end of the link. This created a new web page from the show’s identifier
+                (Every page on archive.org has a unique identifier that is stored in its JSON file).
+                Then, on this page (show.html), we
+                obtained the identifier information from the link by splicing it. Once we had this
+                information,
+                all
+                the data could be
+                obtained, including total run time, setlist, notes, and an embedded music player. I coded
+                the
+                embedded music player to show
+                three songs at a time with a scroll option, because this worked best for our format. We
+                wanted
+                the color-changing bears to be visible
+                while the show was playing, reminiscent of a visualizer.
+            </p>
+            <p>
+                I tried to get the image file on each card to correspond to one of the show's image files,
+                but this
+                proved difficult
+                because the naming
+                is not consistent in the JSON data and the image file is not in the same place in each
+                directory. There are lots
+                of image files, some
+                of them were .png and some were .jpg. If I had more time I could likely figure it out but I
+                decided it was fine for
+                now to have the same sound file image of a show on each card. Issac found a good sound file
+                image
+                that is a vector
+                and our hover image shows up nicely behind it.
+
+
+            </p>
+            <p>
+                Moving forward, I would like to edit the title of each card, because as of now, it is just
+                pulling the full title which
+                is not too easy to read. The format is: "Grateful Dead Live at Music Hall on 1976-06-11."
+                The
+                good news is,
+                all of the titles are formatted the same way, so splicing the desired info would not be
+                difficult. Additionally, there is the issue of repeats. When searching a Grateful Dead show
+                on this
+                day in history,
+                there are lots of repeats due to different recordings (from tapers) as well as different
+                sound
+                formats of the same show.
+                As of now it is pulling every one of these, but in the future I think it would make sense to
+                either
+                use logic to narrow it down
+                to one example only (probably based on rating) or instead, when you click on a card for the
+                show it
+                would bring you to another page
+                with every option for that show to let the user decide.
+                <div class="image">
+                    <img src="images/GDCard.png" alt="GDcard" style='width:100%'>
+                </div>
+
+            </p>
+
+            We narrowly fixed a mistake on the morning of our
+            presentation. I checked the
+            web page and there were no results! There was a simple mistake in how the date was being
+            generated
+            that Issac fixed, and
+            I’m glad I checked it early that morning.
+
+            Overall Issac and I had a great time making this project. I have to say it's been my
+            favorite
+            school project thus far.
+            Issac and I worked great as a team together, and we are both happy with the results. This is
+            actually a web
+            app that I will use, and my mom and friends will too!
+
+            <!-- 
+                        <div class="image">
+                            <img src="images/GDCard.png" alt="Me" style='width:100%'>
+                        </div> -->
+            </p>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="footer-expand-sm text-light bg-dark">
+            <p>Madeleine Elyea, March 2020</p>
+        </div>
+
+    </div>
+</body>
